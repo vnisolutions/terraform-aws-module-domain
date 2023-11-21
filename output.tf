@@ -3,9 +3,9 @@ output "zone_id" {
 }
 
 output "acm_certificate" {
-  value = try(module.acm.acm_certificate[*], null)
+  value = module.acm[0].acm_certificate
 }
 
 output "acm_certificate_global" {
-  value = try(module.acm.acm_certificate_global[*], null)
+  value = module.acm[0].acm_certificate_global
 }
